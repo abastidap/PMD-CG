@@ -1,0 +1,59 @@
+; equiNVT.mdp
+; Modificado para incluir los parametros recomendados por Gromacs para Charmm36 except restringir los enlaces con H (constraints = h-bonds)
+
+; RUN CONTROL PARAMETERS
+integrator               = md      ; leap-frog integrator
+dt                       = 0.002  ; 2 fs
+nsteps                   = 800000  ; 400 ps 
+define			 = -DFLEXIBLE
+constraints          	 = h-bonds
+constraint-algorithm 	 = LINCS
+lincs_iter 		 = 1 ; accuracy of LINCS
+lincs_order 		 = 4 ; also related to accuracy
+comm-mode                = Linear ; mode for center of mass motion removal
+nstcomm                  = 1000 ; number of steps for center of mass motion removal
+
+; OUTPUT CONTROL OPTIONS
+nstxout                  = 0    ; Save coordinates every 10 ps 
+nstvout                  = 0    ; Save velocities every 10 ps
+nstfout                  = 0	   ; Save forces
+nstlog                   = 0    ; Update log every 1 ps
+nstenergy                = 0    ; Save energies every 1 ps
+nstcalcenergy        	 = 0
+
+
+; NEIGHBORSEARCHING PARAMETERS
+nstlist                  = 10
+ns-type                  = Grid
+pbc                      = xyz
+rlist                    = 1.2
+cutoff-scheme		 = Verlet 
+
+
+; OPTIONS FOR ELECTROSTATICS AND VDW
+coulombtype              = PME
+rcoulomb                 = 1.2
+fourierspacing		 = 0.12		; Dimensiones de la Grid (para PME)
+vdwtype			 = cutoff
+vdw-modifier		 = force-switch
+rvdw-switch              = 1.0
+rvdw                     = 1.2          ; Large vdW cut-off
+; DISPERSION CORRECTION
+DispCorr                 = no     ; Use with vdW vut-off
+
+; Temperature coupling
+;Tcoupl                   = Berendsen             ; Modification Berendsen (Bussi): real NVT
+Tcoupl			  = v-rescale
+ld-seed			  = 87654321
+tc-grps                  = System
+tau-t                    = 0.1                
+ref-t                    = 298                ; Avobe fluid phase trasition
+;nsttcouple               = 1
+
+; GENERATE VELOCITIES FOR STARTUP RUN
+gen-vel                  = yes    ; Should be the first equilibration
+gen-temp                 = 298.0  ; Temperature to generate corresponding Maxwell distribution
+;gen-seed                 = 12345678     ; Random seed
+
+
+

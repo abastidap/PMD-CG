@@ -1,0 +1,63 @@
+ Res  1 global
+ alpha      (     -90.0,     -35.0)+-(      90.0,      85.0) =       23.57235
+ gamma      (      90.0,       0.0)+-(      90.0,     180.0) =        4.84446
+ Resto      (       0.0,       0.0)+-(       0.0,       0.0) =       71.58318
+ Res  1 der betap     
+ alpha            16.96194
+ gamma             4.27313
+ Resto            78.76493
+ Res  1 der betapr    
+ alpha            32.01261
+ gamma             5.30087
+ Resto            62.68652
+ Res  1 der Resto     
+ alpha            23.09389
+ gamma             5.21302
+ Resto            71.69309
+
+ Res  2 global
+ betap      (     -59.0,     169.0)+-(      50.0,      50.0) =       42.44159
+ betapr     (      60.0,     168.0)+-(      50.0,      50.0) =       34.54486
+ Resto      (       0.0,       0.0)+-(       0.0,       0.0) =       23.01355
+ Res  2 der alpha     
+ betap            39.55445
+ betapr           31.70825
+ Resto            28.73730
+ Res  2 der gamma     
+ betap            40.58557
+ betapr           29.14984
+ Resto            30.26459
+ Res  2 der Resto     
+ betap            43.49827
+ betapr           35.82250
+ Resto            20.67923
+ Res  2 izq alpha     
+ betap            30.53967
+ betapr           46.91391
+ Resto            22.54642
+ Res  2 izq gamma     
+ betap            37.43623
+ betapr           37.79939
+ Resto            24.76438
+ Res  2 izq Resto     
+ betap            46.69964
+ betapr           30.25148
+ Resto            23.04888
+
+ Res  3 global
+ alpha      (     -90.0,     -35.0)+-(      90.0,      85.0) =       23.23077
+ gamma      (      90.0,       0.0)+-(      90.0,     180.0) =        4.82369
+ Resto      (       0.0,       0.0)+-(       0.0,       0.0) =       71.94554
+ Res  3 izq betap     
+ alpha            21.65047
+ gamma             4.61274
+ Resto            73.73679
+ Res  3 izq betapr    
+ alpha            21.32320
+ gamma             4.07035
+ Resto            74.60645
+ Res  3 izq Resto     
+ alpha            29.00854
+ gamma             6.34352
+ Resto            64.64794
+
